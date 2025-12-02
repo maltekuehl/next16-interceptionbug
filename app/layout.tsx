@@ -19,8 +19,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  calendar,
 }: Readonly<{
   children: React.ReactNode;
+  calendar: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -28,6 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        {calendar}
       </body>
     </html>
   );
